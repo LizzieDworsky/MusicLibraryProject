@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import NavigationBar from "./Components/NavigationBar";
 import SearchBar from "./Components/SearchBar";
 import MusicMapper from "./Components/MusicMapper";
 
 function App() {
     const [songs, setSongs] = useState([]);
+    const [filter, setFilter] = useState("");
 
     useEffect(() => {
         getAllSongs();
@@ -18,6 +20,7 @@ function App() {
 
     return (
         <div>
+            <NavigationBar />
             <SearchBar />
             <MusicMapper array={songs} />
             <footer>
