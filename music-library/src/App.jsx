@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import SearchBar from "./Components/SearchBar";
-import DisplayMusic from "./Components/DisplayMusic";
+import MusicMapper from "./Components/MusicMapper";
 
 function App() {
     const [songs, setSongs] = useState([]);
@@ -19,7 +19,7 @@ function App() {
     return (
         <div>
             <SearchBar />
-            <DisplayMusic />
+            <MusicMapper array={songs} />
             <footer>
                 <button onClick={getAllSongs}>Remake API Call</button>
             </footer>
