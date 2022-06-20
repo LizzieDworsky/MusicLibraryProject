@@ -1,11 +1,13 @@
 import React from "react";
 
 const Song = ({ song }) => {
-    return (
-        <div>
-            <h3>{song.title}</h3>
-        </div>
-    );
+    return;
+    <td>{song.title}</td>;
+    <td>{song.album}</td>;
+    <td>{song.artist}</td>;
+    <td>{song.genre}</td>;
+    <td>{song.releaseDate}</td>;
+    <td>{song.likes}</td>;
 };
 
 export default Song;
