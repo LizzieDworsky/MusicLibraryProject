@@ -18,14 +18,28 @@ function App() {
         setSongs(response.data);
     }
 
+    function filterSongs() {
+        let tempFilteredSongs = songs.filter((item) => {
+            if (
+                item.release_date === filter ||
+                item.album === filter ||
+                item.artist === filter ||
+                item.genre === filter
+            ) {
+                return true;
+            }
+        });
+        setSongs(tempFilteredSongs);
+    }
+
     return (
         <div>
             <NavigationBar />
             <SearchBar setState={setFilter} />
+            <button onClick={filterSongs}>Filter</button>
+            <button onClick={getAllSongs}>Refresh Song List</button>
             <MusicMapper array={songs} />
-            <footer>
-                <button onClick={getAllSongs}>Remake API Call</button>
-            </footer>
+            <footer></footer>
         </div>
     );
 }
