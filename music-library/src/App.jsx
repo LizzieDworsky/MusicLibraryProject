@@ -9,7 +9,6 @@ import AddSong from "./Components/AddSong";
 function App() {
     const [songs, setSongs] = useState([]);
     const [filter, setFilter] = useState("");
-    const [newSong, setNewSong] = useState({});
 
     useEffect(() => {
         getAllSongs();
@@ -20,8 +19,8 @@ function App() {
         setSongs(response.data);
     }
 
-    async function createSong() {
-        let response = await axios.post("", newSong);
+    async function createSong(newSong) {
+        let response = await axios.post("http://127.0.0.1:8000/song/", newSong);
         if (response.status === 201) {
             await getAllSongs();
         }
@@ -57,7 +56,7 @@ function App() {
                     <MusicMapper array={songs} />
                 </div>
                 <div className="add-song">
-                    <AddSong setState={setNewSong} />
+                    <AddSong addSong={createSong} />
                 </div>
             </main>
             <footer></footer>
