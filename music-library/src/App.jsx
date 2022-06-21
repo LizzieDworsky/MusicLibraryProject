@@ -21,7 +21,7 @@ function App() {
     return (
         <div>
             <NavigationBar />
-            <SearchBar />
+            <SearchBar setState={setFilter} />
             <MusicMapper array={songs} />
             <footer>
                 <button onClick={getAllSongs}>Remake API Call</button>

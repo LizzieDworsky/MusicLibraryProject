@@ -1,10 +1,14 @@
 import React from "react";
 
-const SearchBar = (props) => {
+const SearchBar = ({ setState }) => {
+    function filter(event) {
+        event.preventDefault();
+    }
+
     return (
-        <form action="submit">
-            {" "}
-            <input type="text" />{" "}
+        <form onSubmit={(event) => filter(event)}>
+            <input onChange={(event) => setState(event.target.value)} />
+            <button type="submit">Filter</button>
         </form>
     );
 };
