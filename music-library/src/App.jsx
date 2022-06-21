@@ -4,10 +4,12 @@ import axios from "axios";
 import NavigationBar from "./Components/NavigationBar";
 import SearchBar from "./Components/SearchBar";
 import MusicMapper from "./Components/MusicMapper";
+import AddSong from "./Components/AddSong";
 
 function App() {
     const [songs, setSongs] = useState([]);
     const [filter, setFilter] = useState("");
+    const [newSong, setNewSong] = useState({});
 
     useEffect(() => {
         getAllSongs();
@@ -16,6 +18,13 @@ function App() {
     async function getAllSongs() {
         let response = await axios.get("http://127.0.0.1:8000/song/");
         setSongs(response.data);
+    }
+
+    async function createSong() {
+        let response = await axios.post("", newSong);
+        if (response.status === 201) {
+            await getAllSongs();
+        }
     }
 
     function filterSongs() {
@@ -44,8 +53,11 @@ function App() {
                     <button onClick={filterSongs}>Filter</button>
                     <button onClick={getAllSongs}>Refresh Song List</button>
                 </div>
-                <div className="music-mapper" id="music-mapper">
+                <div className="music-mapper">
                     <MusicMapper array={songs} />
+                </div>
+                <div className="add-song">
+                    <AddSong setState={setNewSong} />
                 </div>
             </main>
             <footer></footer>
