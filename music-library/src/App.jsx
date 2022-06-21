@@ -24,7 +24,8 @@ function App() {
                 item.release_date === filter ||
                 item.album === filter ||
                 item.artist === filter ||
-                item.genre === filter
+                item.genre === filter ||
+                item.title === filter
             ) {
                 return true;
             }
@@ -34,11 +35,19 @@ function App() {
 
     return (
         <div>
-            <NavigationBar />
-            <SearchBar setState={setFilter} />
-            <button onClick={filterSongs}>Filter</button>
-            <button onClick={getAllSongs}>Refresh Song List</button>
-            <MusicMapper array={songs} />
+            <header>
+                <NavigationBar />
+            </header>
+            <main>
+                <div className="search-bar">
+                    <SearchBar setState={setFilter} />
+                    <button onClick={filterSongs}>Filter</button>
+                    <button onClick={getAllSongs}>Refresh Song List</button>
+                </div>
+                <div className="music-mapper" id="music-mapper">
+                    <MusicMapper array={songs} />
+                </div>
+            </main>
             <footer></footer>
         </div>
     );
