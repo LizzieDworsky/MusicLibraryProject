@@ -58,9 +58,11 @@ button:hover {
 .table-button {
     font-size: 10px;
     padding: 5px 8px;
+    margin: 3px;
 }
 
 .like-button {
+    margin: 3px;
     font-size: 10px;
     padding: 5px 8px;
     background-color: #537895;
@@ -72,7 +74,7 @@ button:hover {
 }
 
 .like-button:hover {
-    background-color: #00c9b3;
+    background-color: #0f588f;
 }
 
 .table-headings {
@@ -81,7 +83,7 @@ button:hover {
 }
 
 .add-song {
-    margin: 30px 0px 0px 75px;
+    margin: 30px 0px 2px 75px;
 }
 
 .add-input-song {

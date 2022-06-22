@@ -5,6 +5,7 @@ import NavigationBar from "./Components/NavigationBar";
 import SearchBar from "./Components/SearchBar";
 import MusicMapper from "./Components/MusicMapper";
 import AddSong from "./Components/AddSong";
+import PostModal from "./Components/PostModal";
 
 function App() {
     const [songs, setSongs] = useState([]);
@@ -65,6 +66,13 @@ function App() {
                 <NavigationBar />
             </header>
             <main>
+                <button
+                    id="open"
+                    className="table-button"
+                    onClick={(event) => <PostModal />}
+                >
+                    Edit
+                </button>
                 <div className="add-song">
                     <h3 className="add-text">Add a New Song</h3>
                     <AddSong addSong={createSong} />

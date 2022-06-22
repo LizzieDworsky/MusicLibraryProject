@@ -29,21 +29,24 @@ const MusicMapper = ({ array, deleteSong, likeSong }) => {
                         <td>{item.genre}</td>
                         <td>{item.release_date}</td>
                         <td>{item.likes}</td>
-                        <button
-                            className="like-button"
-                            onClick={(event) => handleLike(item.id)}
-                        >
-                            Like
-                        </button>
-                        <button
-                            className="table-button"
-                            onClick={(event) => handleDelete(item.id)}
-                        >
-                            Delete
-                        </button>
-                        <button id="open" className="table-button">
-                            Testing
-                        </button>
+                        <td>
+                            <button
+                                className="like-button"
+                                onClick={(event) => handleLike(item.id)}
+                            >
+                                Like
+                            </button>
+                            <br />
+                            <button
+                                className="table-button"
+                                onClick={(event) => handleDelete(item.id)}
+                            >
+                                Delete
+                            </button>
+                        </td>
+                        {/* <button id="open" className="table-button">
+                            Edit
+                        </button> */}
                     </tr>
                 ))}
             </tbody>
