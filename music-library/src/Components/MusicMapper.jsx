@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+// import Modal from "react-bootstrap/Modal";
 
 const MusicMapper = ({ array, deleteSong, likeSong }) => {
+    // const [show, setShow] = useState(false);
+
+    // const handleClose = () => setShow(false);
+    // const handleShow = () => setShow(true);
+
     async function handleDelete(itemId) {
         deleteSong(itemId);
     }
@@ -36,17 +42,30 @@ const MusicMapper = ({ array, deleteSong, likeSong }) => {
                             >
                                 Like
                             </button>
-                            <br />
                             <button
                                 className="table-button"
                                 onClick={(event) => handleDelete(item.id)}
                             >
                                 Delete
                             </button>
+                            {/* <button onClick={handleShow}>Test Modal</button>
+                            <Modal
+                                show={show}
+                                onHide={handleClose}
+                                backdrop="static"
+                                keyboard={false}
+                            >
+                                <Modal.Header closeButton>
+                                    <Modal.Title>Modal Title</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    I don't know what I'm doing...
+                                </Modal.Body>
+                                <Modal.Footer>
+                                    <button onClick={handleClose}>Close</button>
+                                </Modal.Footer>
+                            </Modal> */}
                         </td>
-                        {/* <button id="open" className="table-button">
-                            Edit
-                        </button> */}
                     </tr>
                 ))}
             </tbody>
