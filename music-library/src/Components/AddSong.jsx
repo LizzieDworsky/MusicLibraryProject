@@ -22,37 +22,54 @@ const AddSong = ({ addSong }) => {
 
     return (
         <form onSubmit={(event) => handleAdd(event)}>
-            <label>Title</label>
-            <input
-                type="text"
-                value={title}
-                onChange={(event) => setTitle(event.target.value)}
-            />
-            <label>Album</label>
-            <input
-                type="text"
-                value={album}
-                onChange={(event) => setAlbum(event.target.value)}
-            />
-            <label>Artist</label>
-            <input
-                type="text"
-                value={artist}
-                onChange={(event) => setArtist(event.target.value)}
-            />
-            <label>Genre</label>
-            <input
-                type="text"
-                value={genre}
-                onChange={(event) => setGenre(event.target.value)}
-            />
-            <label>Release Date</label>
-            <input
-                type="text"
-                value={releaseDate}
-                onChange={(event) => setReleaseDate(event.target.value)}
-            />
-            <button type="submit">Add</button>
+            <div className="add-input-song">
+                <label className="add-song-label">Title</label>
+                <input
+                    className="title-input"
+                    type="text"
+                    value={title}
+                    onChange={(event) => setTitle(event.target.value)}
+                />
+            </div>
+            <div className="add-input-song">
+                <label className="add-song-label">Album</label>
+                <input
+                    className="album-input"
+                    type="text"
+                    value={album}
+                    onChange={(event) => setAlbum(event.target.value)}
+                />
+            </div>
+            <div className="add-input-song">
+                <label className="add-song-label">Artist</label>
+                <input
+                    className="artist-input"
+                    type="text"
+                    value={artist}
+                    onChange={(event) => setArtist(event.target.value)}
+                />
+            </div>
+            <div className="add-input-song">
+                <label className="add-song-label">Genre</label>
+                <input
+                    className="genre-input"
+                    type="text"
+                    value={genre}
+                    onChange={(event) => setGenre(event.target.value)}
+                />
+            </div>
+            <div className="add-input-song">
+                <label className="add-song-label">Release Date</label>
+                <input
+                    className="date-input"
+                    type="text"
+                    value={releaseDate}
+                    onChange={(event) => setReleaseDate(event.target.value)}
+                />
+            </div>
+            <button className="add-button" type="submit">
+                Add
+            </button>
         </form>
     );
 };

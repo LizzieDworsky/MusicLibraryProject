@@ -18,6 +18,36 @@ input {
     padding: 5px;
 }
 
+.add-song {
+    margin: 50px;
+}
+
+.add-song-label {
+    margin: 20px;
+    color: #f9fbfe;
+}
+
+.title-input {
+    margin-left: 54px;
+}
+
+.album-input {
+    margin-left: 39px;
+}
+
+.artist-input {
+    margin-left: 47px;
+}
+
+.genre-input {
+    margin-left: 45px;
+}
+
+.add-button {
+    margin-left: 15em;
+    margin-top: 20px;
+}
+
 .content-container {
     margin: 0 auto;
 }
