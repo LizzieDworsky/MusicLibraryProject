@@ -35,6 +35,15 @@ function App() {
         }
     }
 
+    async function likeSong(songPk) {
+        let response = await axios.patch(
+            `http://127.0.0.1:8000/song/${songPk}/`
+        );
+        if (response.status === 200) {
+            await getAllSongs();
+        }
+    }
+
     function filterSongs() {
         let tempFilteredSongs = songs.filter((item) => {
             if (
@@ -71,7 +80,11 @@ function App() {
                     </button>
                 </div>
                 <div className="music-mapper">
-                    <MusicMapper array={songs} deleteSong={deleteSong} />
+                    <MusicMapper
+                        array={songs}
+                        deleteSong={deleteSong}
+                        likeSong={likeSong}
+                    />
                 </div>
             </main>
             <footer></footer>

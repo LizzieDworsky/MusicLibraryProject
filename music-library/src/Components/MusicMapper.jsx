@@ -1,8 +1,11 @@
 import React from "react";
 
-const MusicMapper = ({ array, deleteSong }) => {
-    async function handleClick(itemId) {
+const MusicMapper = ({ array, deleteSong, likeSong }) => {
+    async function handleDelete(itemId) {
         deleteSong(itemId);
+    }
+    async function handleLike(itemId) {
+        likeSong(itemId);
     }
 
     return (
@@ -27,8 +30,14 @@ const MusicMapper = ({ array, deleteSong }) => {
                         <td>{item.release_date}</td>
                         <td>{item.likes}</td>
                         <button
+                            className="like-button"
+                            onClick={(event) => handleLike(item.id)}
+                        >
+                            Like
+                        </button>
+                        <button
                             className="table-button"
-                            onClick={(event) => handleClick(item.id)}
+                            onClick={(event) => handleDelete(item.id)}
                         >
                             Delete
                         </button>

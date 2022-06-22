@@ -60,8 +60,19 @@ button:hover {
     padding: 5px 8px;
 }
 
+.like-button {
+    font-size: 10px;
+    padding: 5px 8px;
+    background-color: #537895;
+    border-color: #537895;
+}
+
 .table-button:hover {
     color: #537895;
+}
+
+.like-button:hover {
+    background-color: #00c9b3;
 }
 
 .table-headings {
