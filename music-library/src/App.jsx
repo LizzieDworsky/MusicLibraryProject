@@ -26,6 +26,15 @@ function App() {
         }
     }
 
+    async function deleteSong(songPk) {
+        let response = await axios.delete(
+            `http://127.0.0.1:8000/song/${songPk}/`
+        );
+        if (response.status === 204) {
+            await getAllSongs();
+        }
+    }
+
     function filterSongs() {
         let tempFilteredSongs = songs.filter((item) => {
             if (
@@ -62,7 +71,7 @@ function App() {
                     </button>
                 </div>
                 <div className="music-mapper">
-                    <MusicMapper array={songs} />
+                    <MusicMapper array={songs} deleteSong={deleteSong} />
                 </div>
             </main>
             <footer></footer>

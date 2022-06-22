@@ -55,6 +55,15 @@ button:hover {
     background-color: transparent;
 }
 
+.table-button {
+    font-size: 10px;
+    padding: 5px 8px;
+}
+
+.table-button:hover {
+    color: #537895;
+}
+
 .table-headings {
     background-color: #537895;
     text-align: left;

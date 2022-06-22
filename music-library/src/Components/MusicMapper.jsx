@@ -1,6 +1,10 @@
 import React from "react";
 
-const MusicMapper = ({ array }) => {
+const MusicMapper = ({ array, deleteSong }) => {
+    async function handleClick(itemId) {
+        deleteSong(itemId);
+    }
+
     return (
         <table>
             <thead>
@@ -22,6 +26,12 @@ const MusicMapper = ({ array }) => {
                         <td>{item.genre}</td>
                         <td>{item.release_date}</td>
                         <td>{item.likes}</td>
+                        <button
+                            className="table-button"
+                            onClick={(event) => handleClick(item.id)}
+                        >
+                            Delete
+                        </button>
                     </tr>
                 ))}
             </tbody>
