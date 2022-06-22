@@ -32,6 +32,9 @@ const MusicMapper = ({ array, deleteSong }) => {
                         >
                             Delete
                         </button>
+                        <button id="open" className="table-button">
+                            Testing
+                        </button>
                     </tr>
                 ))}
             </tbody>
