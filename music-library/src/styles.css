@@ -26,7 +26,7 @@ table {
     width: 82%;
     padding: 2%;
     box-shadow: 0 0 20px black;
-    /* border-collapse: collapse; */
+    border-radius: 30px;
 }
 
 th {
@@ -38,6 +38,21 @@ th {
 td {
     padding: 10px 12px;
     border-bottom: 1px solid #537895;
+}
+
+button {
+    padding: 5px 15px;
+    border: 1px solid #ac6387;
+    background-color: #ac6388cf;
+    color: #fff4f9;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    box-shadow: 3px 3px 10px black;
+}
+
+button:hover {
+    background-color: transparent;
 }
 
 .table-headings {
