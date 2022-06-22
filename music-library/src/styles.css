@@ -9,6 +9,8 @@ main {
 h1 {
     color: #f9fbfe;
     text-align: center;
+    margin-bottom: 0;
+    font-size: 50px;
 }
 
 input {
@@ -18,8 +20,31 @@ input {
     padding: 5px;
 }
 
+table {
+    background-color: #f9fbfe;
+    margin: 0 auto;
+    width: 82%;
+    padding: 2%;
+    box-shadow: 0 0 20px black;
+    /* border-collapse: collapse; */
+}
+
+th {
+    height: 40px;
+    color: #f9fbfe;
+}
+
+.table-headings {
+    background-color: #09203f;
+    text-align: left;
+}
+
 .add-song {
-    margin: 50px;
+    margin: 30px 0px 0px 75px;
+}
+
+.add-input-song {
+    margin: 5px;
 }
 
 .add-song-label {
@@ -45,31 +70,38 @@ input {
 
 .add-button {
     margin-left: 15em;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .content-container {
     margin: 0 auto;
 }
 
-/* .filter-form {
-    margin: 0 auto;
-} */
+.add-text {
+    margin: 0;
+    color: #f9fbfe;
+}
 
 .search-bar {
-    margin: 0 auto;
     display: flex;
+    align-items: center;
+    justify-content: right;
     flex-wrap: wrap;
 }
 
 .filter-button {
-    margin: 25px;
+    margin: 0 10px 15px 0px;
 }
 
 .reset-list-button {
-    margin: 25px;
+    margin: 0 10% 15px 0px;
 }
 
 .filter-input {
-    margin: 25px;
+    margin: 0 10px 15px 0px;
+}
+
+.search-text {
+    color: #f9fbfe;
+    margin: 0 10px 15px 0;
 }

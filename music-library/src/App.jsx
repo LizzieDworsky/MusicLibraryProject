@@ -47,7 +47,12 @@ function App() {
                 <NavigationBar />
             </header>
             <main>
+                <div className="add-song">
+                    <h3 className="add-text">Add a New Song</h3>
+                    <AddSong addSong={createSong} />
+                </div>
                 <div className="search-bar">
+                    <h3 className="search-text">Search for a Song</h3>
                     <SearchBar setState={setFilter} className="filter-input" />
                     <button className="filter-button" onClick={filterSongs}>
                         Filter
@@ -58,9 +63,6 @@ function App() {
                 </div>
                 <div className="music-mapper">
                     <MusicMapper array={songs} />
-                </div>
-                <div className="add-song">
-                    <AddSong addSong={createSong} />
                 </div>
             </main>
             <footer></footer>

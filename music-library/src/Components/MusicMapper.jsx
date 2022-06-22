@@ -4,7 +4,7 @@ const MusicMapper = ({ array }) => {
     return (
         <table>
             <thead>
-                <tr>
+                <tr className="table-headings">
                     <th>Song Title</th>
                     <th>Album</th>
                     <th>Artist</th>
