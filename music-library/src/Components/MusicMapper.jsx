@@ -15,7 +15,7 @@ const MusicMapper = ({ array }) => {
             </thead>
             <tbody>
                 {array.map((item) => (
-                    <tr key={item.id}>
+                    <tr className="table-content" key={item.id}>
                         <td>{item.title}</td>
                         <td>{item.album}</td>
                         <td>{item.artist}</td>
