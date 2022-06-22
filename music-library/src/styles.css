@@ -1,3 +1,45 @@
 body {
     background: linear-gradient(90deg, #09203f -15%, #537895 60%);
 }
+
+main {
+    margin: 0 auto;
+}
+
+h1 {
+    color: #f9fbfe;
+    text-align: center;
+}
+
+input {
+    background-color: #f9fbfe;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.content-container {
+    margin: 0 auto;
+}
+
+/* .filter-form {
+    margin: 0 auto;
+} */
+
+.search-bar {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-button {
+    margin: 25px;
+}
+
+.reset-list-button {
+    margin: 25px;
+}
+
+.filter-input {
+    margin: 25px;
+}

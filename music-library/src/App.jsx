@@ -42,15 +42,19 @@ function App() {
     }
 
     return (
-        <div>
+        <div className="content-container">
             <header>
                 <NavigationBar />
             </header>
             <main>
                 <div className="search-bar">
-                    <SearchBar setState={setFilter} />
-                    <button onClick={filterSongs}>Filter</button>
-                    <button onClick={getAllSongs}>Refresh Song List</button>
+                    <SearchBar setState={setFilter} className="filter-input" />
+                    <button className="filter-button" onClick={filterSongs}>
+                        Filter
+                    </button>
+                    <button className="reset-list-button" onClick={getAllSongs}>
+                        Refresh Song List
+                    </button>
                 </div>
                 <div className="music-mapper">
                     <MusicMapper array={songs} />
